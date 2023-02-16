@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "cmath": "c",
+        "queryenvironment.h": "c",
+        "json.h": "c",
+        "aqo.h": "c",
+        "limits": "c",
+        "*.tcc": "c",
+        "type_traits": "c",
+        "typeinfo": "c",
+        "cstdlib": "cpp",
+        "*.map": "c"
+    }
+}
