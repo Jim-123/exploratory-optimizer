@@ -17,7 +17,7 @@ cd contrib/aqo
 make clean && make && make install 
 ```
 Restart your database server
-### 2. Install the data and sql functions
+### Install the data and sql functions
 ## install data
 Database like imdb and tpch which can be found in www, omit here.
 ## install sql functions
