@@ -19,7 +19,7 @@ make clean && make && make install
 Restart your database server
 ### Install the data and sql functions
 ## install data
-Database like imdb and tpch which can be found in www, omit here.
+Database like imdb and tpcds which can be found in www, omit here.
 ## install sql functions and execute sql
    Run two files under the fold of sql functions.
    create extension aqo;
