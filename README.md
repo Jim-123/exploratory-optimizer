@@ -21,8 +21,8 @@ Restart your database server
 ## install data
 Database like imdb and tpcds which can be found in www, omit here.
 ## install sql functions and execute sql
-   Run two files under the fold of sql functions.
-   create extension aqo;
+1. create extension aqo;
+2. Run two files under the fold of sql functions.
 ### Running experiments 
 Under the folder of run_experiments
 1. configurate the config_file.py
