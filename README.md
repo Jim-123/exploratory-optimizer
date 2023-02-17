@@ -21,7 +21,7 @@ Restart your database server
 ## install data
 Database like imdb and tpch which can be found in www, omit here.
 ## install sql functions
-    	Run two files under the fold of sql functions.
+   Run two files under the fold of sql functions.
 
 ### Running experiments 
 Under the folder of run_experiments
