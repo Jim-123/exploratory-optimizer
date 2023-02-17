@@ -1,14 +1,14 @@
 # exploratory optimizer
 
 
-# Development
+### Development
     This is the code for the exploratory optimizer: "Towards an Exploratory Query Optimizer for Template-based SQL" paper. We implement it in the form of a PostgreSQL plug-in. The code is developed on the basis of project “AQO” which can be found in “https://github.com/postgrespro/aqo”.
 
-# Requirements
+### Requirements
 - Python 3.6
 - Postgresql-10
 
-## Install the PostgreSQL
+### Install the PostgreSQL
 ```sh
 cd postgresql-10.0-with-exploratory-optimizer
 bash ./configure --prefix=/opt/PostgreSQL-10/ --without-readline --enable-debug CFLAGS='-O0 -g'
