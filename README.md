@@ -20,7 +20,7 @@ Restart your database server
 ### Install the data and sql functions
 ## install data
 Database like imdb and tpcds which can be found in www, omit here.
-## install sql functions and execute sql
+## execute sql and install sql functions
 1. create extension aqo;
 2. Run two files under the fold of sql functions.
 ### Running experiments 
