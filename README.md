@@ -26,13 +26,14 @@ Database like imdb and tpcds which can be found in www, omit here.
 ### Running experiments 
 Under the folder of run_experiments
 1. configurate the config_file.py
-2. modify the function aqo_planner in file preprocessing.c to configurate the query templates of current workloadm. (you can use select pg_backend_pid and gdb tools to get the hash value (query_context.current_query_hash = get_query_hash(parse, query_text)) of each query template. If you not do that, database will use origin optimizer for that query. Now, we implement in this stupid way , in the future, we will update it. )
+2. modify the function aqo_planner in file preprocessing.c to configurate the query templates of current workload. (you can use select pg_backend_pid and gdb tools to get the hash value (query_context.current_query_hash = get_query_hash(parse, query_text)) of each query template. If you not do that, database will use origin optimizer for that query. Now, we implement in this stupid way , in the future, we will update it. )
 ```sh
 cd postgresql-10.0-with-exploratory-optimizer/contrib/aqo   
 vi preprocessing.c                                              
 make clean && make && make install 
 ```
 Restart your database server
+
 4. run
     ```sh
      python run_workloads_runtime_experiments.py --delete-old-data=1  --query-mode=2  --begin-num=1  --end-num=4000  ----history-num=7 --markov-m=3
