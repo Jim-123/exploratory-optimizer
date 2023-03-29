@@ -2,7 +2,7 @@
 
 
 ### Development
-    This is the code for the exploratory optimizer: "Towards an Exploratory Query Optimizer for Template-based SQL" paper. We implement it in the form of a PostgreSQL plug-in. The code is developed on the basis of project “AQO” which can be found in “https://github.com/postgrespro/aqo”.
+    This is the code for the exploratory optimizer: "Towards Exploratory Query Optimization for Template-based SQL" paper. We implement it in the form of a PostgreSQL plug-in. The code is developed on the basis of project “AQO” which can be found in “https://github.com/postgrespro/aqo”.
 
 ### Requirements
 - Python 3.6
