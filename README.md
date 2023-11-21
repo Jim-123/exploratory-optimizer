@@ -32,8 +32,7 @@ cd postgresql-10.0-with-exploratory-optimizer/contrib/aqo
 vi preprocessing.c                                              
 make clean && make && make install 
 ```
-Restart your database server
-
+3.Restart your database server
 4. run
     ```sh
      python run_workloads_runtime_experiments.py --delete-old-data=1  --query-mode=2  --begin-num=1  --end-num=4000  ----history-num=7 --markov-m=3
