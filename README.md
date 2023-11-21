@@ -32,7 +32,7 @@ cd postgresql-10.0-with-exploratory-optimizer/contrib/aqo
 vi preprocessing.c                                              
 make clean && make && make install 
 ```
-3.Restart your database server
+3. Restart your database server
 
 4. run
     ```sh
