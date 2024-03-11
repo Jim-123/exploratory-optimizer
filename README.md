@@ -30,4 +30,3 @@ Under the folder of run_experiments
     ```sh
      python run_workloads_runtime_experiments.py --delete-old-data=1  --query-mode=2  --begin-num=1  --end-num=4000  ----history-num=7 --markov-m=3
     ```
-
