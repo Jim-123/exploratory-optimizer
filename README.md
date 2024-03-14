@@ -36,5 +36,5 @@ make clean && make && make install
 
 4. run
     ```sh
-     python run_workloads_runtime_experiments.py --delete-old-data=1  --query-mode=2  --begin-num=1  --end-num=4000  ----history-num=7 --markov-m=3
+     python run_workloads_runtime_experiments.py --delete-old-data=1  --query-mode=1  --begin-num=1  --end-num=4000  ----history-num=7 --markov-m=3
     ```
