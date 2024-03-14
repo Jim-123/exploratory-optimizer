@@ -97,7 +97,7 @@ def run_workloads_runtime_experiments(delete_old_data, query_mode, begin_num, en
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--delete-old-data', type=int, default='1', help='delete old data')
-    parser.add_argument('--query-mode', type=int, default='2', help='query mode')   # 0 postgresql optimizer
+    parser.add_argument('--query-mode', type=int, default='1', help='query mode')   # 0 postgresql optimizer
     parser.add_argument('--begin-num', type=int, default='1', help='begin num')
     parser.add_argument('--end-num', type=int, default='4000', help='end num')
     parser.add_argument('--history-num', type=int, default='7', help='historic data')

@@ -1,9 +1,0 @@
---拉取
-git remote add origin https://github.com/yourName/repositoryname.git
-git pull origin master 
-
---提交
-git init
-git add .
-git commit -m “你的提交信息”
-git pus

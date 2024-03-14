@@ -1,0 +1,9 @@
+Name: libpq
+Description: PostgreSQL libpq library
+Url: http://www.postgresql.org/
+Version: 10.0
+Requires: 
+Requires.private: 
+Cflags: -I/opt/PostgreSQL-10/include
+Libs: -L/opt/PostgreSQL-10/lib -lpq
+Libs.private:  -lcrypt
