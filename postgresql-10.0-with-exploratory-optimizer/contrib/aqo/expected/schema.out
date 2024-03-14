@@ -1,0 +1,49 @@
+DROP EXTENSION IF EXISTS aqo CASCADE;
+NOTICE:  extension "aqo" does not exist, skipping
+DROP SCHEMA IF EXISTS test CASCADE;
+NOTICE:  schema "test" does not exist, skipping
+-- Check Zero-schema path behaviour
+CREATE SCHEMA IF NOT EXISTS test;
+SET search_path TO test;
+DROP SCHEMA IF EXISTS test CASCADE;
+CREATE EXTENSION aqo;  -- fail
+ERROR:  no schema has been selected to create in
+-- Check default schema switching after AQO initialization
+CREATE SCHEMA IF NOT EXISTS test1;
+SET search_path TO test1, public;
+CREATE EXTENSION aqo;
+SET aqo.mode = 'intelligent';
+CREATE TABLE test (id SERIAL, data TEXT);
+INSERT INTO test (data) VALUES ('string');
+SELECT * FROM test;
+ id |  data  
+----+--------
+  1 | string
+(1 row)
+
+-- Check AQO service relations state after some manipulations
+-- Exclude fields with hash values from the queries. Hash is depend on
+-- nodefuncs code which is highly PostgreSQL version specific.
+SELECT query_text FROM public.aqo_query_texts;
+                   query_text                   
+------------------------------------------------
+ COMMON feature space (do not delete!)
+ INSERT INTO test (data) VALUES ('string');
+ SELECT * FROM test;
+ SELECT query_text FROM public.aqo_query_texts;
+(4 rows)
+
+SELECT learn_aqo, use_aqo, auto_tuning FROM public.aqo_queries;
+ learn_aqo | use_aqo | auto_tuning 
+-----------+---------+-------------
+ f         | f       | f
+ t         | f       | t
+ t         | f       | t
+ t         | f       | t
+ t         | f       | t
+(5 rows)
+
+DROP SCHEMA IF EXISTS test1 CASCADE;
+NOTICE:  drop cascades to 2 other objects
+DETAIL:  drop cascades to extension aqo
+drop cascades to table test
